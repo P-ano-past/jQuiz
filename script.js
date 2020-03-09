@@ -154,13 +154,16 @@ $( "document" ).ready(function(){
             $(containerEl).append('<p id="q-tag">')
 
             for(i = 0; i < 4; i++){
-            if (btnCount <= 3) {
+
+                if (btnCount <= 3) {
                     
-            btnCount = btnCount + 1; 
-            $(containerEl).append('<input type=button class="input" id=btnAdd' + btnCount + ' ' + 'value="Text Element ' + btnCount + '" />');
+                    btnCount = btnCount + 1; 
+                    $(containerEl).append('<input type=button class="input" id=btnAdd' + btnCount + ' ' + 'value="Text Element ' + btnCount + '" />');
                 }
-            $('#main').after(containerEl)
+
+                $('#main').after(containerEl)
             }
+
             $(containerEl).append('<p id="ans-tag">')
             throwInfo()
         })   
