@@ -6,102 +6,102 @@ $( "document" ).ready(function(){
         {
             question: "1. Which of the following is a single global function defined in the jQuery library?",
             answers: {
-                a: "jQuery()",
-                b: "$()",
-                c: "Queryanalysis()",
-                d: "None of the mentioned",
+                a: "A: jQuery()",
+                b: "B: $()",
+                c: "C: Queryanalysis()",
+                d: "D: None of the mentioned",
             },
-            correctAnswer: "a"
+            correctAnswer: "A: jQuery()"
         },    
         {
             question: "2. Which jQuery method is used to hide selected elements?",
             answers: {
-                a: "hidden()",
-                b: "hide()",
-                c: "visible(false)",
-                d: "display(none)",
+                a: "A: hidden()",
+                b: "B: hide()",
+                c: "C: visible(false)",
+                d: "D: display(none)",
             },
-            correctAnswer: "b"
+            correctAnswer: "B: hide()"
         },    
         {
             question: "3. Look at the following jQuery selector: $(“div#intro .head”). What does it select?",
             answers: {
-                a: "The first element with id=”head” inside any div element with class=”intro”",
-                b: "All elements with class=”head” inside the first div element with id=”intro”",
-                c: "All div elements with id=”intro” or class=”head”",
-                d: "None",
+                a: "A: The first element with id=”head” inside any div element with class=”intro”",
+                b: "B: All elements with class=”head” inside the first div element with id=”intro”",
+                c: "C: All div elements with id=”intro” or class=”head”",
+                d: "D: None",
             },
-            correctAnswer: "c"
+            correctAnswer: "C: All div elements with id=”intro” or class=”head”"
         },    
         {
             question: "4. $.foo() is equivalent to",
             answers: {
-                a: "javascript.foo()",
-                b: "document.foo()",
-                c: "jQuery.foo()",
-                d: "None of the above",
+                a: "A: javascript.foo()",
+                b: "B: document.foo()",
+                c: "C: jQuery.foo()",
+                d: "D: None of the above",
             },
-            correctAnswer: "c"
+            correctAnswer: "C: jQuery.foo()"
         },    
         {
             question: "5. Which built-in method returns the character at the specified index?",
             answers: {
-                a: "characterAt()",
-                b: "getCharAt()",
-                c: "charAt()",
-                d: "None of the above",
+                a: "A: characterAt()",
+                b: "B: getCharAt()",
+                c: "C: charAt()",
+                d: "D: None of the above",
             },
-            correctAnswer: "c"
+            correctAnswer: "C: charAt()"
         },    
         {
             question: "6. Using ________ function, we can hold or release the execution of jQuery’s ready event.",
             answers: {
-                a: "jQuery.holdReady()",
-                b: "jQuery.ready()",
-                c: "jQuery.hold()",
-                d: "jQuery.holdready()",
+                a: "A: jQuery.holdReady()",
+                b: "B: jQuery.ready()",
+                c: "C: jQuery.hold()",
+                d: "D: jQuery.holdready()",
             },
-            correctAnswer: ""
+            correctAnswer: "B: jQuery.ready()"
         },    
         {
             question: "7. The ………. method is like offset(), except that it is a getter only and it returns element positions relative to their offset parent, rather to the document as a whole.",
             answers: {
-                a: "width()",
-                b: "position()",
-                c: "offsetparent()",
-                d: "setparent()",
+                a: "A: width()",
+                b: "B: position()",
+                c: "C: offsetparent()",
+                d: "D: setparent()",
             },
-            correctAnswer: "b"
+            correctAnswer: "B: position()"
         },    
         {
             question: "8. jQuery code to set the background color of all span elements to blue?",
             answers: {
-                a: "$(“span”).style(“background-color”,”blue”);",
-                b: "$(“span”).manipulate(“background-color”,”blue”);",
-                c: "$(“span”).css(“background-color”,”blue”);",
-                d: "$(“span”).layout(“background-color”,”blue”);",
+                a: "A: $(“span”).style(“background-color”,”blue”);",
+                b: "B: $(“span”).manipulate(“background-color”,”blue”);",
+                c: "C: $(“span”).css(“background-color”,”blue”);",
+                d: "D: $(“span”).layout(“background-color”,”blue”);",
             },
-            correctAnswer: ""
+            correctAnswer: "C: $(“span”).css(“background-color”,”blue”);"
         },    
         {
             question: "9. What does the min mean?",
             answers: {
-                a: "Minimised version",
-                b: "Minimised parameters",
-                c: "Miniature",
-                d: "Minimum value",
+                a: "A: Minimised version",
+                b: "B: Minimised parameters",
+                c: "C: Miniature",
+                d: "D: Minimum value",
             },
-            correctAnswer: "a"
+            correctAnswer: "A: Minimised version"
         },    
         {
             question: "10. Which of the following is used for parsing JSON text?",
             answers: {
-                a: "jQuery.each()",
-                b: "jQuery.parseJSON()",
-                c: "jQuery.noConflict()",
-                d: "None of the mentioned",
+                a: "A: jQuery.each()",
+                b: "B: jQuery.parseJSON()",
+                c: "C: jQuery.noConflict()",
+                d: "D: None of the mentioned",
             },
-            correctAnswer: "b"
+            correctAnswer: "B: jQuery.parseJSON()"
         },    
 
     ];
@@ -160,7 +160,8 @@ $( "document" ).ready(function(){
             $(containerEl).append('<input type=button class="input" id=btnAdd' + btnCount + ' ' + 'value="Text Element ' + btnCount + '" />');
                 }
             $('#main').after(containerEl)
-            }    
+            }
+            $(containerEl).append('<p id="ans-tag">')
             throwInfo()
         })   
     
@@ -171,15 +172,22 @@ $( "document" ).ready(function(){
         const btn2 = $('#btnAdd2')
         const btn3 = $('#btnAdd3')
         const btn4 = $('#btnAdd4')
+        const aTag = $('#ans-tag')
+ 
 
-        for(i = 0; i < quizQnA.length; i++) {
-            console.log(quizQnA)
-        qTag.append(quizQnA[i].question)
-        btn1.val(quizQnA[i].answers.a)
-        btn2.val(quizQnA[i].answers.b)
-        btn3.val(quizQnA[i].answers.c)
-        btn4.val(quizQnA[i].answers.d)
-        }
+        
+
+        qTag.append(quizQnA[0].question)
+        btn1.val(quizQnA[0].answers.a)
+        btn2.val(quizQnA[0].answers.b)
+        btn3.val(quizQnA[0].answers.c)
+        btn4.val(quizQnA[0].answers.d)
+        btn1.on('click', function(){
+            aTag.append(quizQnA[0].correctAnswer)
+        })
+        
+
+        
     }
 
         // how to access quiz questions and answers
@@ -187,4 +195,5 @@ $( "document" ).ready(function(){
     // console.log(quizQnA[0].question.length)
     // console.log(quizQnA[0].answers.a)
     // console.log(quizQnA[0].correctAnswer)
+    throwInfo()
 });
