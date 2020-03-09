@@ -166,32 +166,25 @@ $( "document" ).ready(function(){
     
         // Place all quiz related functions in here. 
     function throwInfo() {
-        const qTag = $( '#q-tag' );
-        const btn1 = $( '#btnAdd1' );
-        const btn2 = $( '#btnAdd2' );
-        const btn3 = $( '#btnAdd3' );
-        const btn4 = $( '#btnAdd4' );
-        const correctAns = "";
-        
+        const qTag = $('#q-tag')
+        const btn1 = $('#btnAdd1')
+        const btn2 = $('#btnAdd2')
+        const btn3 = $('#btnAdd3')
+        const btn4 = $('#btnAdd4')
+
         for(i = 0; i < quizQnA.length; i++) {
-            console.log(quizQnA[i])
+            console.log(quizQnA)
+        qTag.append(quizQnA[i].question)
+        btn1.val(quizQnA[i].answers.a)
+        btn2.val(quizQnA[i].answers.b)
+        btn3.val(quizQnA[i].answers.c)
+        btn4.val(quizQnA[i].answers.d)
         }
-        
-        qTag.append( document.createTextNode( quizQnA[0].question ) )
-        btn1.val( quizQnA[0].answers.a ) 
-        btn2.val( quizQnA[0].answers.b ) 
-        btn3.val( quizQnA[0].answers.c ) 
-        btn4.val( quizQnA[0].answers.d ) 
-
-        
-
-
-       
     }
 
         // how to access quiz questions and answers
 
-    // console.log(quizQnA[0].question)
-    console.log(quizQnA[0].answers.a )
+    // console.log(quizQnA[0].question.length)
+    // console.log(quizQnA[0].answers.a)
     // console.log(quizQnA[0].correctAnswer)
 });
