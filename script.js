@@ -161,17 +161,37 @@ $( "document" ).ready(function(){
                 }
             $('#main').after(containerEl)
             }    
+            throwInfo()
         })   
     
         // Place all quiz related functions in here. 
     function throwInfo() {
-        const qTag = $('#q-tag')
-        qTag.append(quizQnA[0].question)
+        const qTag = $( '#q-tag' );
+        const btn1 = $( '#btnAdd1' );
+        const btn2 = $( '#btnAdd2' );
+        const btn3 = $( '#btnAdd3' );
+        const btn4 = $( '#btnAdd4' );
+        const correctAns = "";
+        
+        for(i = 0; i < quizQnA.length; i++) {
+            console.log(quizQnA[i])
+        }
+        
+        qTag.append( document.createTextNode( quizQnA[0].question ) )
+        btn1.val( quizQnA[0].answers.a ) 
+        btn2.val( quizQnA[0].answers.b ) 
+        btn3.val( quizQnA[0].answers.c ) 
+        btn4.val( quizQnA[0].answers.d ) 
+
+        
+
+
+       
     }
 
         // how to access quiz questions and answers
-console.log(quizQnA[3].question)
-console.log(quizQnA[3].answers)
-console.log(quizQnA[3].answers.a)
-throwInfo()
+
+    // console.log(quizQnA[0].question)
+    console.log(quizQnA[0].answers.a )
+    // console.log(quizQnA[0].correctAnswer)
 });

@@ -1,0 +1,63 @@
+
+
+AS A coding bootcamp student
+I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+SO THAT I can gauge my progress compared to my peers
+
+GIVEN I am taking a code quiz
+WHEN I click the start button
+THEN a timer starts and I am presented with a question
+WHEN I answer a question
+THEN I am presented with another question
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+WHEN the game is over
+THEN I can save my initials and score
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+id="#start-button" onclick="startGame()" 
+
+
+
+
+function startGame() {
+    let timer = (whatever a timer is here)
+    
+   if (correctAnswer == true) {
+       
+   }
+
+}
+
+
+
+3/4/20
+
+HTML:
+create document div for populating the items on the screen. 
+id="display"
+
+1. Need a "Start" button to first populate and then disappear once clicked. 
+    $(start)on.("click", function(){
+        (jQuery research: populating into a div)
+    })
+
+2. Once the "Start" button is clicked, a timer needs to initiate at 60000ms and 1 p tag as a question with 4 answers as buttons need to populate. 
+
+3. each of the questions answered correctly gets added +10000ms, incorrect -10000ms (plus 10 seconds, minus 10 seconds?)
+
+4. REGARDLESS IF THE QUESTION IS ANSWERED RIGHT OR WRONG, clear the screen and populate the next set. 
+
+
+
+JS:
+(clear) please refer to "exampleindex.html" for how to clear the page from each question. (line 113)
+(populate) 
+
